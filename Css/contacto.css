@@ -1,0 +1,139 @@
+.Contacto{
+    background-color: var(--primary-color);
+    color:white;
+    font-size: 18px;
+    border-radius: 14px;
+    padding: 25px;
+    display: grid;
+    gap:25px;
+}
+
+.Contacto p,
+.Contacto h2,
+.Contacto ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-titulo{
+    font-size: 30px;
+    font-weight: 500px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contacto-detail,
+.contacto-form{
+    display: grid;
+    gap: 20px;
+
+}
+
+.contacto-grupo,
+.contacto-form-grupo{
+    display: grid;
+    gap:3px;
+}
+
+.contacto-label{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contacto-form input,
+.contacto-form textarea{
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.contacto-form textarea{
+    height: auto;
+    resize: vertical;
+}
+
+.submit-button{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border-radius: 10px;
+    color:white;
+    border: 1px solid var(--theme-color);
+    cursor:pointer;
+}
+
+.submit-button:hover{
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+}
+
+.social-lista{
+ list-style: none;
+ display: flex;
+ gap:25px;
+ justify-content: center;
+}
+
+.social-lista img{
+    height: 25px;
+}
+
+.social-lista img:hover{
+    transform : scale(2);
+    transition: 1.5s ease;
+}
+
+@media (min-width:950px){
+    .Contacto{
+        font-size: 20px;
+        padding: 70px;
+        max-width: 980px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    
+    .contacto-titulo{
+    font-size: 35px;
+    text-align: left;
+       
+    }
+    
+    .social-media{
+     justify-content: flex-start;
+    }
+    
+    .social-lista img{
+     height: 35px;
+    }
+    
+    .contacto-titulo{
+        grid-area: titulo;
+    }
+    
+    .contacto-detail{
+        grid-area: detalle;
+    }
+
+    .contacto-form{
+        grid-area: forma;
+    }
+
+    .social-media{
+        grid-area: social;
+    }
+    
+    .Contacto{
+        grid: 
+        "titulo forma" auto
+        "detalle forma" 1fr
+        "social forma" auto/
+         1fr     1fr;
+         align-items: start;
+    }
+    .contacto-text{
+        letter-spacing: 1px;
+    }
+}
+

@@ -1,0 +1,134 @@
+.TopHeader{
+    
+    border-radius: 1px;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,87,148,0.9360119047619048) 13%, rgba(0,0,0,1) 81%);
+    z-index: 100;
+
+    
+}
+
+.TopNav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;
+    margin:0 auto;
+}
+
+.Logo{
+    font-weight:bold;
+    font-size: 18px;
+    color:var(--primary-color);
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    
+}
+
+.Logo img {
+    border-radius: 50%;
+}
+
+/* Menu */
+.Menu{
+    display:flex;
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+.Menu li{
+    padding: 0 15px;
+}
+
+.Menu a{
+    color:white;
+    font-size:18px;
+    font-weight:500;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+.Menu a::after{
+    content: "";
+    background-color: var(--secundary-color);
+    position: absolute;
+    left: 0;
+    top:100%;
+    width: 100%;
+    height: 4px;
+    border-radius: 1px;
+    opacity: 0;
+    
+}
+
+.Menu a.Select::after,
+.Menu a:hover::after{
+  opacity: 1;
+  transition: 0.5s;
+}
+.Menu a:hover{
+    color:#40f2fe ;
+}
+
+.Open,
+.Close{
+    display: none;
+}
+
+/*mobile */
+
+@media (max-width:950px){
+    
+    .Menu{
+        flex-direction: column;
+        position: fixed;
+        left:0;
+        top:0;
+        width: 100%;
+        align-items: center;
+        background-color: var(--mobile-background-color);
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s;
+       
+    }
+    .Menu li{
+        padding: 0;
+    }
+    
+    .Menu a{
+        color: var(--text-color-inverse);
+        line-height: 60px;
+    }
+    
+    .Open,
+    .Close{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;    
+    }
+
+    .Close{
+        align-self: flex-end;
+        padding: 20px 15px;
+    }
+
+    .Menu-open{
+        opacity: 1;
+        pointer-events: all;
+       
+    }
+    
+    .Open:focus:not(:focus-visible),
+    .Close:focus:not(:focus-visible){
+        outline: none;
+    }
+}

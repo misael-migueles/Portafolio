@@ -1,0 +1,38 @@
+.png{
+    width: 100px;
+    height: 100px;
+    padding: 0 20px;
+}
+.png:hover{
+    cursor: pointer;
+    transform : scale(1.1);
+    transition: 1s ease;
+}
+
+.Skill-title{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+   
+}
+
+.Skills{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.Skill-lista{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media(min-width: 950px){
+    .Skill-title{
+        font-size: 40px;
+    }
+    
+}

@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script defer src="JS/app.js"></script>
 </head>
 <body>
@@ -65,9 +69,9 @@
          <p class="Descripcion">
           Web Developer y Técnico Agropecuario. Soy amante de la tecnología pero también de la naturaleza, Creo que la vida es un proceso continuo de aprendizaje.  Mis pilares de motivación son la Iniciativa, Responsabilidad, Cooperación, Dedicación y el Trabajo en Equipo.
          </p>
-         <button class="Download">
+         <a class="Download" href="Misael-Migueles-Cv.pdf" download>
           Descargar cv
-         </button>
+         </a>
         </div>
         <span class="Image">
         <img class="imgPerfil" src="assets/perfil.png" alt="perfil">
@@ -139,7 +143,7 @@
               <p class="contacto-text">Deje su mensaje, y será respondido</p>
         </div>
       </div>
-     <form class="contacto-form">
+     <form class="contacto-form" name="contacto" netlify>
       <div class="contacto-form-grupo">
         <label for="name">Nombre:</label>
         <input required type="text" name="name" id="name">
